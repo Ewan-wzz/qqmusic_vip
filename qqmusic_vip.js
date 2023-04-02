@@ -17,7 +17,7 @@ const header = {
     "Accept-Encoding": "gzip, deflate",
     "Accept-Language": "zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2",
     "Connection": "keep-alive",
-    "Cookie": "PHPSESSID=b2g1ijgmjkdrn9398h489n4qtg",
+    "Cookie": "PHPSESSID=2ci8e8iahtn1dgkp8g57p1g417",
     "Upgrade-Insecure-Requests": "1"
 }
 
@@ -50,7 +50,7 @@ export class qqmusic extends plugin {
         /**var reg = "(?<=歌*).*$";*/
         const name = e.msg.match(/歌.*/);
         /** 接口地址 */
-        let apiurl = `http://ovooa.muban.plus/API/QQ_Music/?Cookie=&msg=${name}&n=1&br=3`;
+        let apiurl = `http://ovooa.muban.plus/API/QQ_Music_new/?msg=${name}&n=1&br=3`;
         /** 调用接口获取数据 */
         let response = await fetch(apiurl,{headers:header}).catch((err) => logger.error(err));
         /** 判断接口是否请求成功 */
